@@ -1,0 +1,98 @@
+{
+  "version": 8,
+  "sources": {
+    "ua": {
+      "type": "vector",
+      "tiles": [
+        "pmtiles://data/ua.pmtiles"
+      ]
+    }
+  },
+  "center": [
+    32.589,
+    45.399
+  ],
+  "zoom": 5.48,
+  "minzoom": 0,
+  "maxzoom": 14,
+  "sprite": "https://tile.openstreetmap.jp/styles/maptiler-toner-en/sprite",
+  "glyphs": "https://tile.openstreetmap.jp/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#f6f6f6"
+      }
+    },
+    {
+      "type": "fill",
+      "source": "ua",
+      "id": "ocean",
+      "source-layer": "ocean",
+      "paint": {
+        "fill-color": "#cbd2df"
+      }
+    },
+    {
+      "type": "fill",
+      "source": "ua",
+      "id": "water_polygons",
+      "source-layer": "water_polygons",
+      "paint": {
+        "fill-color": "#cbd2df",
+        "fill-opacity": {
+          "stops": [
+            [
+              4,
+              0
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "type": "fill",
+      "source": "ua",
+      "id": "buildings",
+      "source-layer": "buildings",
+      "paint": {
+        "fill-color": "#e0d1d9",
+        "fill-opacity": {
+          "stops": [
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "type": "line",
+      "source": "ua",
+      "id": "boundaries",
+      "source-layer": "boundaries",
+      "filter": [
+        "all",
+        [
+          "==",
+          "maritime",
+          false
+        ]
+      ],
+      "paint": {
+        "line-color": "#e6ccd8"
+      }
+    }
+  ]
+}
+

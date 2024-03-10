@@ -3,3 +3,6 @@ dist/
 docs/.observablehq/cache/
 node_modules/
 yarn-error.log
+*.pmtiles
+*.mbtiles
+
